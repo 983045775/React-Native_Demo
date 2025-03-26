@@ -25,14 +25,15 @@ function InputView() {
         }}
         value={value}></TextInput>
       <TouchableOpacity
+        activeOpacity={0.8}
         style={styles.touchView}
         onPressIn={event => {
           setShow(false);
-          setTouchTextColor("#000000")
+          setTouchTextColor('#000');
         }}
         onPressOut={event => {
           setShow(true);
-          setTouchTextColor("#ffffff")
+          setTouchTextColor('#fff');
         }}>
         <Text style={{color: touchableTextColor}}>
           {show ? '显示' : '隐藏'}
@@ -44,13 +45,14 @@ function InputView() {
 
 const styles = StyleSheet.create({
   root: {
+    backgroundColor: '#fff',
     alignItems: 'center',
     flexDirection: 'row',
   },
   textInputStyle: {
     borderRadius: 14,
     minHeight: 30,
-    backgroundColor: '#ff000055',
+    backgroundColor: '#333fff33',
     minWidth: 250,
     fontSize: 20,
     marginTop: 30,
