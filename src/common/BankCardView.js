@@ -15,6 +15,7 @@ import iconBank from '../assets/icon_bank.png';
  * @returns {Element}
  * @constructor
  */
+
 function BankCardView() {
 
   const toastConsole =()=>{
