@@ -45,6 +45,8 @@ function BankCardView() {
   );
 }
 
+export default BankCardView;
+
 const styles = StyleSheet.create({
   root: {
     alignItems: 'center',
@@ -97,4 +99,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default BankCardView;
+

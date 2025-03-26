@@ -7,12 +7,15 @@
 
 import React from 'react';
 import BankCardView from './src/common/BankCardView';
+import InputViewDemo from './src/common/InputViewDemo';
 import {Text, View} from 'react-native';
 
 function App() {
   return (
     <View>
-      <BankCardView />
+      {/*<BankCardView />*/}
+
+      <InputViewDemo />
     </View>
   );
 }
