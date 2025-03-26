@@ -6,13 +6,14 @@
  */
 
 import React from 'react';
-import BankCardView from './src/common/BankCardView';
+import BankCardView from './src/common/BankCardView.tsx';
 import InputViewDemo from './src/common/InputViewDemo';
 import PressableView from './src/common/PressableView.js';
 import {ScrollView, View} from 'react-native';
 
 function App() {
-  return (
+
+    return (
     <ScrollView>
       <View
         style={{

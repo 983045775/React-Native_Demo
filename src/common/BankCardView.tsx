@@ -6,7 +6,9 @@ import {
   View,
   StyleSheet,
 } from 'react-native';
+// @ts-ignore
 import bgCard from '../assets/bg_card.png';
+// @ts-ignore
 import iconBank from '../assets/icon_bank.png';
 
 /**
@@ -27,7 +29,7 @@ function BankCardView() {
         <View>
           <Text
             style={styles.titleName}
-            onPress={(event) => {
+            onPress={() => {
               toastConsole();
             }}>
             招商银行
