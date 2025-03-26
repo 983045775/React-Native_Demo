@@ -1,0 +1,7 @@
+
+# 对所有文件使用 LF 换行符
+* text=auto eol=lf
+
+# 或者对特定文件类型设置
+*.sh text eol=lf
+*.bat text eol=crlf
