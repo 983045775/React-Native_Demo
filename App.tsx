@@ -7,7 +7,7 @@
 
 import React from 'react';
 import BankCardView from './src/common/BankCardView.tsx';
-import InputViewDemo from './src/common/InputViewDemo';
+import InputViewDemo from './src/common/InputViewDemo.tsx';
 import PressableView from './src/common/PressableView.js';
 import {ScrollView, View} from 'react-native';
 

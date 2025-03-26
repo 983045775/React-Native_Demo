@@ -27,11 +27,11 @@ function InputView() {
       <TouchableOpacity
         activeOpacity={0.8}
         style={styles.touchView}
-        onPressIn={event => {
+        onPressIn={() => {
           setShow(false);
           setTouchTextColor('#000');
         }}
-        onPressOut={event => {
+        onPressOut={() => {
           setShow(true);
           setTouchTextColor('#fff');
         }}>
