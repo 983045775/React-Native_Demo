@@ -1,9 +1,16 @@
 import React, {useState} from 'react';
-import {Text, View, TextInput, StyleSheet, Platform} from 'react-native';
+import {
+  Text,
+  View,
+  TextInput,
+  StyleSheet,
+  TouchableOpacity,
+} from 'react-native';
 
 function InputView() {
   const [value, setValue] = useState('');
   const [show, setShow] = useState(true);
+  const [touchableTextColor, setTouchTextColor] = useState('#ffffff');
   return (
     <View style={styles.root}>
       <TextInput
@@ -17,13 +24,20 @@ function InputView() {
           }
         }}
         value={value}></TextInput>
-      <Text
-        style={{marginTop: 24, marginLeft: 20}}
-        onPress={event => {
-          setShow(!show);
+      <TouchableOpacity
+        style={styles.touchView}
+        onPressIn={event => {
+          setShow(false);
+          setTouchTextColor("#000000")
+        }}
+        onPressOut={event => {
+          setShow(true);
+          setTouchTextColor("#ffffff")
         }}>
-        {show ? '显示' : '隐藏'}
-      </Text>
+        <Text style={{color: touchableTextColor}}>
+          {show ? '显示' : '隐藏'}
+        </Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -41,6 +55,16 @@ const styles = StyleSheet.create({
     fontSize: 20,
     marginTop: 30,
     marginLeft: 30,
+  },
+  touchView: {
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    width: 50,
+    height: 50,
+    backgroundColor: '#03030355',
+    marginLeft: 30,
+    marginTop: 30,
   },
 });
 

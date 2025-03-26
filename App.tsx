@@ -12,9 +12,14 @@ import {Text, View} from 'react-native';
 
 function App() {
   return (
-    <View>
-      {/*<BankCardView />*/}
-
+    <View
+      style={{
+        backgroundColor: '#ff0000',
+        flexDirection: 'column',
+        width: '100%',
+        height: 400,
+      }}>
+      <BankCardView />
       <InputViewDemo />
     </View>
   );
