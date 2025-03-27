@@ -9,8 +9,9 @@ import React from 'react';
 import BankCardView from './src/common/BankCardView.tsx';
 import InputViewDemo from './src/common/InputViewDemo.tsx';
 import PressableView from './src/common/PressableView.js';
-import ScrollsView from "./src/common/ScrollsView.js";
+import ScrollsView from './src/common/ScrollsView.js';
 import {ScrollView, View} from 'react-native';
+import ScrollViewDemo from './src/common/ScrollViewDemo';
 
 function App() {
   return (
@@ -24,8 +25,9 @@ function App() {
     //     <BankCardView />
     //     <InputViewDemo />
     //     <PressableView />
-        <ScrollsView />
-      // </View>
+    //     <ScrollsView />
+    <ScrollViewDemo />
+    // </View>
     // </ScrollView>
   );
 }
