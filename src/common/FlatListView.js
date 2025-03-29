@@ -16,7 +16,7 @@ function FlatListView(props) {
   };
 
   let footView = () => {
-    return <Text style={{textAlign: 'center'}}>到达底部了</Text>;
+    return <Text style={{backgroundColor:"#00ff1133",textAlign: 'center'}}>到达底部了</Text>;
   };
 
   for (let i = 0; i < size; i++) {
