@@ -12,6 +12,7 @@ import PressableView from './src/common/PressableView.js';
 import ScrollsView from './src/common/ScrollsView.js';
 import {ScrollView, View} from 'react-native';
 import ScrollViewDemo from './src/common/ScrollViewDemo';
+import FlatListView from './src/common/FlatListView';
 
 function App() {
   return (
@@ -26,7 +27,8 @@ function App() {
     //     <InputViewDemo />
     //     <PressableView />
     //     <ScrollsView />
-    <ScrollViewDemo length={30}/>
+    // <ScrollViewDemo length={30}/>
+    <FlatListView size={30} />
     // </View>
     // </ScrollView>
   );
