@@ -15,8 +15,12 @@ function FlatListView(props) {
     );
   };
 
+  let footView = () => {
+    return <Text style={{textAlign: 'center'}}>到达底部了</Text>;
+  };
+
   for (let i = 0; i < size; i++) {
-    datas.push('这是第 ' + i);
+    datas.push('这是第 ' + (i + 1) + '个内容');
   }
 
   return (
@@ -25,6 +29,7 @@ function FlatListView(props) {
       data={datas}
       //减少渲染开销
       keyExtractor={(_, index) => `item  + ${index}`}
+      ListFooterComponent={footView}
       renderItem={renderItem}
     />
   );

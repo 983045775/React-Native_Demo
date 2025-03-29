@@ -28,7 +28,7 @@ function App() {
     //     <PressableView />
     //     <ScrollsView />
     // <ScrollViewDemo length={30}/>
-    <FlatListView size={30} />
+    <FlatListView size={130} />
     // </View>
     // </ScrollView>
   );
