@@ -19,7 +19,7 @@ function ScrollViewDemo(props) {
 
     for (let i = 0; i < length; i++) {
       mViews.push(
-        <Text style={styles.scrollTxt}>{'当前是第 ' + (i + 1) + ' 个'}</Text>,
+        <Text style={styles.scrollTxt} key={"优化渲染" + i}>{'当前是第 ' + (i + 1) + ' 个'}</Text>,
       );
     }
     console.log('长度是几个view  = ' + mViews.length);
