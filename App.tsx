@@ -26,7 +26,7 @@ function App() {
     //     <InputViewDemo />
     //     <PressableView />
     //     <ScrollsView />
-    <ScrollViewDemo />
+    <ScrollViewDemo length={30}/>
     // </View>
     // </ScrollView>
   );
