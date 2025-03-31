@@ -19,9 +19,13 @@ function PersonalView() {
         </View>
         {/*头像*/}
         <View style={styles.avatarView}>
-          <ImageBackground imageStyle={styles.avatar} source={avatar}>
+          <ImageBackground
+            style={styles.imgAvatar}
+            imageStyle={styles.avatar}
+            source={avatar}>
             <Image style={styles.add} source={add}></Image>
           </ImageBackground>
+          {/*名字和二维码*/}
           <View style={styles.descContainer}>
             <Text style={styles.name}>大公爵</Text>
             <View style={styles.titleContainer}>
@@ -30,6 +34,8 @@ function PersonalView() {
             </View>
           </View>
         </View>
+        {/*点击关注，填写简介*/}
+        <Text style={styles.follow}>点击关注，填写简介</Text>
       </ImageBackground>
     </View>
   );
@@ -68,20 +74,24 @@ const styles = StyleSheet.create({
   },
   avatar: {
     borderRadius: 200,
+  },
+  imgAvatar: {
     width: 90,
     height: 90,
   },
   add: {
-    marginLeft: 64,
-    marginTop: 64,
+    position: 'absolute',
+    bottom: 0,
+    right: 0,
     width: 30,
     height: 30,
   },
   avatarView: {
+    alignItems: 'center',
     flexDirection: 'row',
     marginTop: 20,
     marginLeft: 10,
-    width: 190,
+    width: '100%',
     height: 90,
   },
   name: {
@@ -93,17 +103,24 @@ const styles = StyleSheet.create({
     color: 'white',
   },
   descContainer: {
+    width: '100%',
     paddingLeft: 10,
   },
   titleContainer: {
-    marginTop:10,
+    marginTop: 10,
     flexDirection: 'row',
   },
   code: {
-    marginLeft:6,
-    marginTop:4,
+    marginLeft: 6,
+    marginTop: 4,
     width: 16,
     height: 16,
+  },
+  follow: {
+    fontSize: 16,
+    color: 'white',
+    marginTop: 20,
+    marginLeft: 10,
   },
 });
 
