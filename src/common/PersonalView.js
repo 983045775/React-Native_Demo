@@ -100,6 +100,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   code: {
+    marginLeft:6,
     marginTop:4,
     width: 16,
     height: 16,
