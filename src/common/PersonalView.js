@@ -25,18 +25,46 @@ import icon_3 from '../assets/icon_3.png';
 function PersonalView() {
   const [chooseInt, setChooseInt] = useState(0);
 
-  // 准备多个图片源
-  const imageSources = [
-    require('./assets/icon_1.png'),
-    require('./assets/icon_2.png'),
-    require('./assets/icon_3.png'),
-  ];
-
-
   const noteRef = useRef(null);
   const collectRef = useRef(null);
   const praiseRef = useRef(null);
   const contentIconRef = useRef(null);
+
+  const contentList = [];
+
+  contentList[0] = (
+    <>
+      <Image style={styles.bottomIcon} ref={contentIconRef} source={icon_1} />
+      <Text style={styles.bottomTxt1}>用一句话，分享今天的快乐吧~</Text>
+      <Text style={styles.bottomTxt2}>去分享</Text>
+    </>
+  );
+  contentList[1] = (
+    <>
+      <Image style={styles.bottomIcon} ref={contentIconRef} source={icon_2} />
+      <Text style={styles.bottomTxt1}>快去收藏你喜欢的作品吧～</Text>
+      <Text style={styles.bottomTxt2}>去分享</Text>
+    </>
+  );
+  contentList[2] = (
+    <>
+      <Image style={styles.bottomIcon} ref={contentIconRef} source={icon_3} />
+      <Text style={styles.bottomTxt1}>你还没有给作品点赞哦～</Text>
+      <Text style={styles.bottomTxt2}>去分享</Text>
+    </>
+  );
+
+  function getView(){
+      if(chooseInt == 1){
+          return (contentList[0])
+      }else if(chooseInt == 2){
+          return (contentList[1])
+      }else if(chooseInt == 3){
+          return (contentList[2])
+      }
+
+  }
+
   useEffect(() => {
     //初始化好了
     setChooseInt(1);
@@ -103,9 +131,6 @@ function PersonalView() {
               style={styles.chooseTxtView}
               onPress={event => {
                 setChooseInt(1);
-                contentIconRef.current.setNativeProps({
-                  source: imageSources[0]
-                })
               }}>
               <Text
                 style={[
@@ -126,9 +151,6 @@ function PersonalView() {
               style={[styles.chooseTxtView, {marginLeft: 20}]}
               onPress={event => {
                 setChooseInt(2);
-                contentIconRef.current.setNativeProps({
-                  source: imageSources[1]
-                })
               }}>
               <Text
                 style={[
@@ -149,9 +171,6 @@ function PersonalView() {
               style={[styles.chooseTxtView, {marginLeft: 20}]}
               onPress={() => {
                 setChooseInt(3);
-                contentIconRef.current.setNativeProps({
-                  source: imageSources[2]
-                })
               }}>
               <Text
                 style={[
@@ -180,9 +199,7 @@ function PersonalView() {
           />
           {/*  下面主页内容*/}
           <View style={styles.bottomContent}>
-            <Image ref={contentIconRef} source={icon_1} />
-            <Text style={styles.bottomTxt1}>用一句话，分享今天的快乐吧~</Text>
-            <Text style={styles.bottomTxt2}>去分享</Text>
+              {getView()}
           </View>
         </View>
       </ImageBackground>
@@ -364,6 +381,10 @@ const styles = StyleSheet.create({
   },
   bottomContent: {
     alignItems: 'center',
+  },
+  bottomIcon: {
+      width: 200,
+      height: 200,
   },
   bottomTxt1: {
     marginTop: 10,

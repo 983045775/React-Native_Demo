@@ -15,6 +15,7 @@ import ScrollViewDemo from './src/common/ScrollViewDemo';
 import FlatListView from './src/common/FlatListView';
 import SectionViewDemo from "./src/common/SectionViewDemo";
 import PersonalView from './src/common/PersonalView';
+import SafeImageSwitcher from "./src/common/SafeImageSwitcher";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
     // <FlatListView size={130} />
     // <SectionViewDemo />
       <PersonalView/>
+      // <SafeImageSwitcher/>
     // </View>
     // </ScrollView>
   );
