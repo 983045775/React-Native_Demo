@@ -55,6 +55,7 @@ function ModalDemo() {
         renderSectionHeader={info => {
           return headSection(info);
         }}
+        stickySectionHeadersEnabled={true}
       />
     </View>
   );
