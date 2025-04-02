@@ -6,6 +6,7 @@ import {
   ImageBackground,
   Text,
   TouchableOpacity,
+  Modal,
 } from 'react-native';
 
 import background from '../assets/icon_bg.png';
@@ -19,6 +20,7 @@ import setting from '../assets/icon_setting.png';
 import icon_1 from '../assets/icon_1.png';
 import icon_2 from '../assets/icon_2.png';
 import icon_3 from '../assets/icon_3.png';
+import ModalDemo from './ModalDemo';
 
 //定义一个函数,根据值判断设置颜色
 
@@ -31,6 +33,18 @@ function PersonalView() {
   const contentIconRef = useRef(null);
 
   const contentList = [];
+
+  const modalRefs = useRef(null);
+
+  const [show, setShow] = useState(false);
+
+  function hideModal() {
+    setShow(false);
+  }
+
+  function showModal() {
+    setShow(true);
+  }
 
   contentList[0] = (
     <>
@@ -54,15 +68,14 @@ function PersonalView() {
     </>
   );
 
-  function getView(){
-      if(chooseInt == 1){
-          return (contentList[0])
-      }else if(chooseInt == 2){
-          return (contentList[1])
-      }else if(chooseInt == 3){
-          return (contentList[2])
-      }
-
+  function getView() {
+    if (chooseInt == 1) {
+      return contentList[0];
+    } else if (chooseInt == 2) {
+      return contentList[1];
+    } else if (chooseInt == 3) {
+      return contentList[2];
+    }
   }
 
   useEffect(() => {
@@ -107,8 +120,14 @@ function PersonalView() {
             <Text style={[styles.numberTxt, {color: '#ffffff77'}]}>关注</Text>
           </View>
           <View style={styles.fanView}>
-            <Text style={styles.numberTxt}>2098</Text>
-            <Text style={[styles.numberTxt, {color: '#ffffff77'}]}>粉丝</Text>
+            <TouchableOpacity
+              style={{justifyContent: 'center', alignItems: 'center'}}
+              onPress={event => {
+                showModal();
+              }}>
+              <Text style={styles.numberTxt}>2098</Text>
+              <Text style={[styles.numberTxt, {color: '#ffffff77'}]}>粉丝</Text>
+            </TouchableOpacity>
           </View>
           <View style={styles.fanView}>
             <Text style={styles.numberTxt}>1042</Text>
@@ -198,11 +217,19 @@ function PersonalView() {
             }}
           />
           {/*  下面主页内容*/}
-          <View style={styles.bottomContent}>
-              {getView()}
-          </View>
+          <View style={styles.bottomContent}>{getView()}</View>
         </View>
       </ImageBackground>
+
+      <Modal
+        style={styles.root}
+        visible={show}
+        transparent={true}
+        onRequestClose={event => {
+          hideModal();
+        }}>
+        <ModalDemo />
+      </Modal>
     </View>
   );
 }
@@ -383,8 +410,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   bottomIcon: {
-      width: 200,
-      height: 200,
+    width: 200,
+    height: 200,
   },
   bottomTxt1: {
     marginTop: 10,
