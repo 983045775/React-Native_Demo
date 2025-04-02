@@ -1,4 +1,4 @@
-import React, {useState, useRef, useEffect} from 'react';
+import React, {useState, useRef, useEffect, createContext, useContext} from 'react';
 import {
   View,
   Image,
@@ -23,6 +23,7 @@ import icon_3 from '../assets/icon_3.png';
 import ModalDemo from './ModalDemo';
 
 //定义一个函数,根据值判断设置颜色
+const ModalContext = createContext();
 
 function PersonalView() {
   const [chooseInt, setChooseInt] = useState(0);
@@ -228,7 +229,9 @@ function PersonalView() {
         onRequestClose={event => {
           hideModal();
         }}>
-        <ModalDemo />
+        <ModalContext.Provider value={{ hideModal}}>
+          <ModalDemo />
+        </ModalContext.Provider>
       </Modal>
     </View>
   );
@@ -423,5 +426,6 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
 });
-
 export default PersonalView;
+
+export const useModal = () => useContext(ModalContext);

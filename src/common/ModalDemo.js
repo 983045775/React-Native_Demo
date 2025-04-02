@@ -10,8 +10,11 @@ import {
 } from 'react-native';
 import iconClose from '../assets/icon_close_modal.png';
 import {ContactsData} from '../constant/DataDemo';
+import {useModal} from '../common/PersonalView';
 
 function ModalDemo() {
+  const {hideModal} = useModal();
+
   //定义列表样式
   const rowView = props => {
     const {item, index} = props;
@@ -28,7 +31,11 @@ function ModalDemo() {
     <View style={styles.root}>
       <View style={styles.titleView}>
         <Text style={styles.titleTxt}>粉丝列表</Text>
-        <TouchableOpacity style={styles.closeTouch} onPress={event => {}}>
+        <TouchableOpacity
+          style={styles.closeTouch}
+          onPress={event => {
+            hideModal();
+          }}>
           <Image style={styles.closeView} source={iconClose} />
         </TouchableOpacity>
       </View>
