@@ -13,9 +13,10 @@ import ScrollsView from './src/common/ScrollsView.js';
 import {ScrollView, View} from 'react-native';
 import ScrollViewDemo from './src/common/ScrollViewDemo';
 import FlatListView from './src/common/FlatListView';
-import SectionViewDemo from "./src/common/SectionViewDemo";
+import SectionViewDemo from './src/common/SectionViewDemo';
 import PersonalView from './src/common/PersonalView';
-import SafeImageSwitcher from "./src/common/SafeImageSwitcher";
+import SafeImageSwitcher from './src/common/SafeImageSwitcher';
+import BridgeClassDemo from './src/android/BridgeClassDemo';
 
 function App() {
   return (
@@ -33,10 +34,11 @@ function App() {
     // <ScrollViewDemo length={30}/>
     // <FlatListView size={130} />
     // <SectionViewDemo />
-      <PersonalView/>
-      // <SafeImageSwitcher/>
+    //   <PersonalView/>
+    // <SafeImageSwitcher/>
     // </View>
     // </ScrollView>
+    <BridgeClassDemo />
   );
 }
 
