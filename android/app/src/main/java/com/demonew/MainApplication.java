@@ -3,6 +3,7 @@ package com.demonew;
 import android.app.Application;
 
 
+import com.demonew.rn.DemoPackages;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
 import com.facebook.react.ReactHost;
@@ -25,7 +26,7 @@ public class MainApplication extends Application implements ReactApplication {
         public List<ReactPackage> getPackages() {
             List<ReactPackage> packages = new PackageList(this).getPackages();
             // 手动添加无法自动链接的包，例如：
-            // packages.add(new MyReactNativePackage());
+            packages.add(new DemoPackages());
             return packages;
         }
 
