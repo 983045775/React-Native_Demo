@@ -2,6 +2,7 @@ package com.demonew.rn;
 
 import androidx.annotation.NonNull;
 
+import com.demonew.ui.InfoViewManager;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
@@ -23,6 +24,8 @@ public class DemoPackages implements ReactPackage {
     @NonNull
     @Override
     public List<ViewManager> createViewManagers(@NonNull ReactApplicationContext reactApplicationContext) {
-        return Collections.emptyList();
+        List<ViewManager> viewManagers = new ArrayList<>();
+        viewManagers.add(new InfoViewManager());
+        return viewManagers;
     }
 }

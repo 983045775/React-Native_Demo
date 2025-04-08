@@ -1,4 +1,4 @@
-package com.demonew.view;
+package com.demonew.ui;
 
 import android.content.Intent;
 import android.os.Bundle;

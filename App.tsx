@@ -17,6 +17,7 @@ import SectionViewDemo from './src/common/SectionViewDemo';
 import PersonalView from './src/common/PersonalView';
 import SafeImageSwitcher from './src/common/SafeImageSwitcher';
 import BridgeClassDemo from './src/android/BridgeClassDemo';
+import InfoView from './src/android/InfoView.js';
 
 function App() {
   return (
@@ -38,7 +39,8 @@ function App() {
     // <SafeImageSwitcher/>
     // </View>
     // </ScrollView>
-    <BridgeClassDemo />
+    // <BridgeClassDemo />
+    <InfoView />
   );
 }
 
