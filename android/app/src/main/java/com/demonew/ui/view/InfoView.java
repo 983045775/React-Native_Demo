@@ -15,6 +15,8 @@ import com.facebook.react.bridge.ReactContext;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.uimanager.events.RCTEventEmitter;
 
+import kotlin.random.Random;
+
 /**
  * @author lc
  * @description:
@@ -52,8 +54,8 @@ public class InfoView extends LinearLayout {
     public void click() {
         ReactContext mContext = (ReactContext) getContext();
         WritableMap writableMap = Arguments.createMap();
-        writableMap.putString("shape", "yuan");
-        mContext.getJSModule(RCTEventEmitter.class).receiveEvent(getId(), "change", writableMap);
+        writableMap.putString("shape", "yuan" + Random.Default.nextInt());
+        mContext.getJSModule(RCTEventEmitter.class).receiveEvent(getId(), "onChange", writableMap);
     }
 
     public void setName(String name) {

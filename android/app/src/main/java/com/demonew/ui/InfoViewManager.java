@@ -50,10 +50,10 @@ public class InfoViewManager extends ViewGroupManager<LinearLayout> {
     @Override
     public Map getExportedCustomBubblingEventTypeConstants() {
         return MapBuilder.builder()
-                .put("change",
+                .put("onChange",
                         MapBuilder.of(
                                 "phasedRegistrationNames",
-                                MapBuilder.of("bubbled", "change")
+                                MapBuilder.of("bubbled", "onChange")
                         )
                 ).build();
     }
