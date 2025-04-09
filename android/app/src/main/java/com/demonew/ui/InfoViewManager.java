@@ -5,6 +5,7 @@ import android.widget.LinearLayout;
 import com.demonew.ui.view.InfoView;
 import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.ViewGroupManager;
+import com.facebook.react.uimanager.annotations.ReactProp;
 
 import androidx.annotation.NonNull;
 
@@ -24,5 +25,20 @@ public class InfoViewManager extends ViewGroupManager<LinearLayout> {
     @Override
     protected LinearLayout createViewInstance(@NonNull ThemedReactContext mContext) {
         return new InfoView(mContext);
+    }
+
+    @ReactProp(name = "photo")
+    public void setPhoto(InfoView view, String url) {
+        view.setUrl(url);
+    }
+
+    @ReactProp(name = "name")
+    public void setName(InfoView view, String name) {
+        view.setName(name);
+    }
+
+    @ReactProp(name = "desc")
+    public void setDesc(InfoView view, String desc) {
+        view.setDesc(desc);
     }
 }
