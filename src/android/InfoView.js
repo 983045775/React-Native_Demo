@@ -18,7 +18,7 @@ function InfoView() {
       }
       name={'刘铖'}
       desc={'一个人类'}
-      change={event => {
+      onChange={event => {
         let log = event.nativeEvent.shape;
         console.log(log);
       }}></InfoViewAndroid>
