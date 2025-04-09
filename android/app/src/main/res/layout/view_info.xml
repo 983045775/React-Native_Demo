@@ -15,14 +15,16 @@
         android:orientation="vertical">
 
         <TextView
+            android:textSize="16sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="刘铖" />
 
         <TextView
+            android:textSize="16sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="我是个人简介" />
+            android:text="我是个人简介,使用了Linearlayout做返回值" />
     </LinearLayout>
 
 </LinearLayout>
