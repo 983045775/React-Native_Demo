@@ -30,4 +30,10 @@
             android:textSize="16sp" />
     </LinearLayout>
 
+    <Button
+        android:id="@+id/btn_click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="点击了" />
+
 </LinearLayout>

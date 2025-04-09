@@ -3,11 +3,15 @@ package com.demonew.ui;
 import android.widget.LinearLayout;
 
 import com.demonew.ui.view.InfoView;
+import com.facebook.react.common.MapBuilder;
 import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.ViewGroupManager;
 import com.facebook.react.uimanager.annotations.ReactProp;
 
+import java.util.Map;
+
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 /**
  * @author lc
@@ -40,5 +44,17 @@ public class InfoViewManager extends ViewGroupManager<LinearLayout> {
     @ReactProp(name = "desc")
     public void setDesc(InfoView view, String desc) {
         view.setDesc(desc);
+    }
+
+    @Nullable
+    @Override
+    public Map getExportedCustomBubblingEventTypeConstants() {
+        return MapBuilder.builder()
+                .put("change",
+                        MapBuilder.of(
+                                "phasedRegistrationNames",
+                                MapBuilder.of("bubbled", "change")
+                        )
+                ).build();
     }
 }
