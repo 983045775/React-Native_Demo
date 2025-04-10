@@ -1,12 +1,14 @@
 package com.demonew.ui.view;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.demonew.R;
@@ -50,6 +52,10 @@ public class InfoView extends LinearLayout {
     public void setUrl(String url) {
         Glide.with(this).load(url).into(mIvPhoto);
     }
+    public void setNameColor(String color) {
+        Toast.makeText(getContext(),"设置文字颜色了",Toast.LENGTH_SHORT).show();
+        mTvName.setTextColor(Color.parseColor(color));
+    }
 
     public void click() {
         ReactContext mContext = (ReactContext) getContext();
@@ -65,5 +71,9 @@ public class InfoView extends LinearLayout {
 
     public void setDesc(String desc) {
         mTvDesc.setText(desc);
+    }
+
+    public void setNameName(String names) {
+        mTvName.setText(names);
     }
 }
