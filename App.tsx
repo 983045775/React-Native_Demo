@@ -18,6 +18,7 @@ import PersonalView from './src/common/PersonalView';
 import SafeImageSwitcher from './src/common/SafeImageSwitcher';
 import BridgeClassDemo from './src/android/BridgeClassDemo';
 import InfoView from './src/android/InfoView.js';
+import NavigationBarView from './src/android/NavigationBarView';
 
 function App() {
   return (
@@ -40,7 +41,8 @@ function App() {
     // </View>
     // </ScrollView>
     // <BridgeClassDemo />
-    <InfoView />
+    // <InfoView />
+    <NavigationBarView />
   );
 }
 

@@ -3,6 +3,7 @@ package com.demonew.rn;
 import androidx.annotation.NonNull;
 
 import com.demonew.ui.InfoViewManager;
+import com.demonew.ui.NavigationBarManager;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
@@ -26,6 +27,7 @@ public class DemoPackages implements ReactPackage {
     public List<ViewManager> createViewManagers(@NonNull ReactApplicationContext reactApplicationContext) {
         List<ViewManager> viewManagers = new ArrayList<>();
         viewManagers.add(new InfoViewManager());
+        viewManagers.add(new NavigationBarManager());
         return viewManagers;
     }
 }
