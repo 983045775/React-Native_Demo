@@ -2,11 +2,16 @@ package com.demonew.ui.view;
 
 
 import android.content.Context;
+import android.graphics.Color;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.demonew.R;
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.ReactContext;
@@ -24,6 +29,7 @@ public class NavigationBarLayout extends LinearLayout implements View.OnClickLis
 
     private TextView mTvExport, mTvTitle;
     private Context context;
+    private ImageView mIvBack;
 
     public NavigationBarLayout(Context context) {
         super(context);
@@ -31,6 +37,7 @@ public class NavigationBarLayout extends LinearLayout implements View.OnClickLis
         this.context = context;
         mTvExport = (TextView) findViewById(R.id.tv_export);
         mTvTitle = (TextView) findViewById(R.id.tv_title);
+        mIvBack = (ImageView) findViewById(R.id.iv_back);
         mTvExport.setOnClickListener(this);
     }
 
@@ -48,5 +55,15 @@ public class NavigationBarLayout extends LinearLayout implements View.OnClickLis
             writableMap.putString("title", title);
             ((ReactContext) context).getJSModule(RCTEventEmitter.class).receiveEvent(getId(), "onTitleChange", writableMap);
         }
+    }
+
+    public void setTitleColor(String color) {
+        Toast.makeText(getContext(), "设置文字颜色了", Toast.LENGTH_SHORT).show();
+        mTvTitle.setTextColor(Color.parseColor(color));
+    }
+
+    public void setPhoto(String url) {
+        Log.e("lc", url);
+        Glide.with(this).load(url).into(mIvBack);
     }
 }
