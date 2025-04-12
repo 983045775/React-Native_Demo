@@ -6,23 +6,35 @@ import {
   ImageBackground,
   Text,
   TouchableOpacity,
-  Modal,
+  Modal, GestureResponderEvent,
 } from 'react-native';
 
+// @ts-ignore
 import background from '../assets/icon_bg.png';
+// @ts-ignore
 import menu from '../assets/icon_menu.png';
+// @ts-ignore
 import share from '../assets/icon_share.png';
+// @ts-ignore
 import avatar from '../assets/default_avatar.png';
+// @ts-ignore
 import add from '../assets/icon_add.png';
+// @ts-ignore
 import code from '../assets/icon_code.png';
+// @ts-ignore
 import male from '../assets/icon_male.png';
+// @ts-ignore
 import setting from '../assets/icon_setting.png';
+// @ts-ignore
 import icon_1 from '../assets/icon_1.png';
+// @ts-ignore
 import icon_2 from '../assets/icon_2.png';
+// @ts-ignore
 import icon_3 from '../assets/icon_3.png';
-import ModalDemo from './ModalDemo';
+import ModalDemo from './ModalDemo.tsx';
 
 //定义一个函数,根据值判断设置颜色
+// @ts-ignore
 const ModalContext = createContext();
 
 function PersonalView() {
@@ -33,9 +45,7 @@ function PersonalView() {
   const praiseRef = useRef(null);
   const contentIconRef = useRef(null);
 
-  const contentList = [];
-
-  const modalRefs = useRef(null);
+  const contentList:any[] = [];
 
   const [show, setShow] = useState(false);
 
@@ -123,7 +133,7 @@ function PersonalView() {
           <View style={styles.fanView}>
             <TouchableOpacity
               style={{justifyContent: 'center', alignItems: 'center'}}
-              onPress={event => {
+              onPress={() => {
                 showModal();
               }}>
               <Text style={styles.numberTxt}>2098</Text>
@@ -149,7 +159,8 @@ function PersonalView() {
           <View style={styles.contentTitleView}>
             <TouchableOpacity
               style={styles.chooseTxtView}
-              onPress={event => {
+              onPress={(event:GestureResponderEvent) => {
+                event.nativeEvent.force
                 setChooseInt(1);
               }}>
               <Text
@@ -169,7 +180,8 @@ function PersonalView() {
             </TouchableOpacity>
             <TouchableOpacity
               style={[styles.chooseTxtView, {marginLeft: 20}]}
-              onPress={event => {
+              onPress={(event:GestureResponderEvent) => {
+                event.nativeEvent.force
                 setChooseInt(2);
               }}>
               <Text
@@ -226,7 +238,7 @@ function PersonalView() {
         style={styles.root}
         visible={show}
         transparent={true}
-        onRequestClose={event => {
+        onRequestClose={() => {
           hideModal();
         }}>
         <ModalContext.Provider value={{ hideModal}}>

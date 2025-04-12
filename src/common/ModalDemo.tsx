@@ -1,27 +1,28 @@
-import React, {useRef, useState} from 'react';
+import React from 'react';
 import {
   Image,
-  Modal,
   SectionList,
   StyleSheet,
   Text,
   TouchableOpacity,
   View,
 } from 'react-native';
+// @ts-ignore
 import iconClose from '../assets/icon_close_modal.png';
 import {ContactsData} from '../constant/DataDemo';
-import {useModal} from '../common/PersonalView';
+import {useModal} from './PersonalView';
 
 function ModalDemo() {
+  // @ts-ignore
   const {hideModal} = useModal();
 
   //定义列表样式
-  const rowView = props => {
-    const {item, index} = props;
+  const rowView = (props:any) => {
+    const {item} = props;
     return <Text style={styles.name}>{item}</Text>;
   };
 
-  const headSection = props => {
+  const headSection = (props:any)  => {
     const {section} = props;
     return <Text style={styles.titleName}> {section.type}</Text>;
   };
@@ -33,7 +34,7 @@ function ModalDemo() {
         <Text style={styles.titleTxt}>粉丝列表</Text>
         <TouchableOpacity
           style={styles.closeTouch}
-          onPress={event => {
+          onPress={() => {
             hideModal();
           }}>
           <Image style={styles.closeView} source={iconClose} />

@@ -6,9 +6,17 @@ import {
   StyleSheet,
   UIManager,
   findNodeHandle,
+  GestureResponderEvent,
+  ViewProps,
 } from 'react-native';
 
-const NavigationBarLayout = requireNativeComponent('NavigationBarManager');
+type NavigationBarManagerView = ViewProps | {
+    onTitleChange:(event:any)=>void;
+};
+
+const NavigationBarLayout = requireNativeComponent<NavigationBarManagerView>(
+  'NavigationBarManager',
+);
 
 function NavigationBarView() {
   let [titleName, setTitleName] = useState('这是个默认值');
@@ -19,14 +27,15 @@ function NavigationBarView() {
       <NavigationBarLayout
         ref={navigationRef}
         style={styles.navigation}
-        onTitleChange={event => {
-          const title = event.nativeEvent.title;
+        onTitleChange={(event: any) => {
+          const title: string = event.nativeEvent.title;
           setTitleName(title);
           console.log(title);
         }}></NavigationBarLayout>
       <Text
         style={styles.txt}
-        onPress={event => {
+        onPress={(event: GestureResponderEvent) => {
+          event.nativeEvent.timestamp;
           let findId = findNodeHandle(navigationRef.current);
           const changeColorCommand = UIManager.getViewManagerConfig(
             'NavigationBarManager',

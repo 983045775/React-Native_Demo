@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Button, NativeModules, StyleSheet} from 'react-native';
+import {View, Button, NativeModules, StyleSheet} from 'react-native';
 
 function BridgeClassDemo() {
   const {AppModule} = NativeModules;
@@ -14,7 +14,7 @@ function BridgeClassDemo() {
           AppModule.androidToast(
             '打印这句话吧！所以方法名不能重复啊',
             '这句话才能生效',
-          ).then(data => {
+          ).then((data:string) => {
             console.log(data);
           });
         }}

@@ -1,4 +1,4 @@
-import React, {use, useRef} from 'react';
+import React, {useRef} from 'react';
 import {ScrollView, StyleSheet, Text} from 'react-native';
 
 function ScrollsView() {
@@ -26,17 +26,19 @@ function ScrollsView() {
         style={styles.txt}
         onPress={() => {
           console.log('press');
-          scrollRef.current.scrollTo({y: 0, animated: true});
+          const mSv: ScrollView = scrollRef.current!;
+          mSv.scrollTo({y: 0, animated: true});
         }}>
-        置顶
+        第一个
       </Text>
       <Text
         style={styles.txt}
         onPress={() => {
           console.log('press');
-          scrollRef.current.scrollToEnd()
+          const mSv: ScrollView = scrollRef.current!;
+          mSv.scrollToEnd();
         }}>
-        底部
+        第二个
       </Text>
       {Views()}
     </ScrollView>

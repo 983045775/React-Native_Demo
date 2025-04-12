@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-function ScrollViewDemo(props) {
+function ScrollViewDemo(props: any) {
   //定义ref的hooks
   const scrRef = useRef(null);
 
@@ -19,7 +19,9 @@ function ScrollViewDemo(props) {
 
     for (let i = 0; i < length; i++) {
       mViews.push(
-        <Text style={styles.scrollTxt} key={"优化渲染" + i}>{'当前是第 ' + (i + 1) + ' 个'}</Text>,
+        <Text style={styles.scrollTxt} key={'优化渲染' + i}>
+          {'当前是第 ' + (i + 1) + ' 个'}
+        </Text>,
       );
     }
     console.log('长度是几个view  = ' + mViews.length);
@@ -33,8 +35,9 @@ function ScrollViewDemo(props) {
       </ScrollView>
       <TouchableOpacity activeOpacity={0.6} style={styles.touchableView}>
         <Text
-          onPress={event => {
-            scrRef.current.scrollTo({y: 0, animated: true});
+          onPress={() => {
+            let mSView: ScrollView = scrRef.current!;
+            mSView.scrollTo({y: 0, animated: true});
           }}
           style={styles.txt}>
           置顶
@@ -43,8 +46,9 @@ function ScrollViewDemo(props) {
 
       <TouchableOpacity activeOpacity={0.6} style={styles.touchableView}>
         <Text
-          onPress={event => {
-            scrRef.current.scrollToEnd({animated: true});
+          onPress={() => {
+            let mSView: ScrollView = scrRef.current!;
+            mSView.scrollToEnd({animated: true});
           }}
           style={styles.txt}>
           到达底部

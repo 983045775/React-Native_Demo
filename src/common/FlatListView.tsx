@@ -1,11 +1,11 @@
 import React from 'react';
-import {FlatList, StyleSheet, View, Text} from 'react-native';
+import {FlatList, StyleSheet, Text} from 'react-native';
 
-function FlatListView(props) {
+function FlatListView(props: any) {
   const {size} = props;
 
-  const datas = [];
-  const renderItem = info => {
+  const data: string[] = [];
+  const renderItem = (info: any) => {
     const {index, item} = info;
     return (
       <Text
@@ -16,17 +16,21 @@ function FlatListView(props) {
   };
 
   let footView = () => {
-    return <Text style={{backgroundColor:"#00ff1133",textAlign: 'center'}}>到达底部了</Text>;
+    return (
+      <Text style={{backgroundColor: '#00ff1133', textAlign: 'center'}}>
+        到达底部了
+      </Text>
+    );
   };
 
   for (let i = 0; i < size; i++) {
-    datas.push('这是第 ' + (i + 1) + '个内容');
+    data.push('这是第 ' + (i + 1) + '个内容');
   }
 
   return (
     <FlatList
       contentContainerStyle={styles.container}
-      data={datas}
+      data={data}
       //减少渲染开销
       keyExtractor={(_, index) => `item  + ${index}`}
       ListFooterComponent={footView}

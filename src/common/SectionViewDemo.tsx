@@ -1,20 +1,14 @@
 import React from 'react';
-import {
-  SectionList,
-  View,
-  Text,
-  StyleSheet,
-  RefreshControl,
-} from 'react-native';
-import {ContactsData} from '../constant/DataDemo.js';
+import {SectionList, View, Text, StyleSheet} from 'react-native';
+import {ContactsData} from '../constant/DataDemo';
 
 function SectionViewDemo() {
-  const renderView = info => {
-    const {item, index} = info;
+  const renderView = (info: any) => {
+    const {item} = info;
     return <Text style={styles.txt}>{`姓名 : ${item}`}</Text>;
   };
 
-  const sectionHeadView = info => {
+  const sectionHeadView = (info: any) => {
     const {section} = info;
     return <Text style={styles.headTxt}>{section.type}</Text>;
   };
@@ -31,7 +25,7 @@ function SectionViewDemo() {
       renderSectionHeader={sectionHeadView}
       stickySectionHeadersEnabled={true}
       sections={ContactsData}
-      refreshControl={null}
+      refreshControl={undefined}
       //提供的数据必须有data字段,react-native要求
       renderItem={renderView}></SectionList>
   );
