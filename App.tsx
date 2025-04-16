@@ -19,6 +19,7 @@ import BridgeClassDemo from './src/android/BridgeClassDemo';
 import InfoView from './src/android/InfoView';
 import NavigationBarView from './src/android/NavigationBarView';
 import TsDemo from './src/ts/TsDemo';
+import {ApiTest} from "./src/apiTest/ApiTest.tsx";
 
 function App() {
   return (
@@ -32,7 +33,7 @@ function App() {
     //     <BankCardView />
     //     <InputViewDemo />
     //     <PressableView />
-    <ScrollsView />
+    // <ScrollsView />
     // <ScrollViewDemo length={30}/>
     // <FlatListView size={130} />
     // <SectionViewDemo />
@@ -42,6 +43,7 @@ function App() {
     // <InfoView />
     // <NavigationBarView />
     // <TsDemo />
+      <ApiTest/>
   );
 }
 
