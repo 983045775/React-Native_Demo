@@ -1,13 +1,13 @@
 import React from 'react';
 import {
-  Text,
-  View,
-  Button,
-  TouchableOpacity,
-  StyleSheet,
-  BackHandler,
-  PermissionsAndroid,
-  Vibration,
+    Text,
+    View,
+    Button,
+    TouchableOpacity,
+    StyleSheet,
+    BackHandler,
+    PermissionsAndroid,
+    Vibration, ToastAndroid,
 } from 'react-native';
 
 function vibrationTest() {
@@ -25,6 +25,7 @@ function vibrationTest() {
         title={'开始振动'}
         onPress={() => {
           startVibration();
+          ToastAndroid.showWithGravity("开始振动",ToastAndroid.SHORT,ToastAndroid.TOP)
         }}
       />
       <Button title={'结束振动'} onPress={()=>{
