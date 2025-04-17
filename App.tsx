@@ -26,6 +26,7 @@ import PixelRatioTest from './src/apiTest/PixelRatioTest';
 import BackHandleTest from './src/apiTest/BackHandleTest';
 import PermissionsTest from './src/apiTest/PermissionsTest.tsx';
 import VibrationTest from './src/apiTest/VibrationTest';
+import KeyboardTest from './src/apiTest/KeyboardTest.tsx';
 
 function App() {
   return (
@@ -55,7 +56,8 @@ function App() {
     // <PixelRatioTest />
     //   <BackHandleTest/>
     // <PermissionsTest/>
-    <VibrationTest />
+    // <VibrationTest />
+      <KeyboardTest/>
   );
 }
 
