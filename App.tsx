@@ -19,7 +19,8 @@ import BridgeClassDemo from './src/android/BridgeClassDemo';
 import InfoView from './src/android/InfoView';
 import NavigationBarView from './src/android/NavigationBarView';
 import TsDemo from './src/ts/TsDemo';
-import {ApiTest} from "./src/apiTest/ApiTest.tsx";
+import {ApiTest} from "./src/apiTest/ApiTest";
+import StyleSheetTest from "./src/apiTest/StyleSheetTest";
 
 function App() {
   return (
@@ -43,7 +44,8 @@ function App() {
     // <InfoView />
     // <NavigationBarView />
     // <TsDemo />
-      <ApiTest/>
+    //   <ApiTest/>
+    <StyleSheetTest/>
   );
 }
 
