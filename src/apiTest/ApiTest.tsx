@@ -4,7 +4,7 @@ import {
     Text,
     useWindowDimensions,
     Dimensions,
-    Button, StyleSheet,
+    Button, StyleSheet, Platform,
 } from 'react-native';
 
 export const ApiTest = () => {
@@ -22,6 +22,7 @@ export const ApiTest = () => {
         onPress={() => {
           const {width, height} = Dimensions.get('window');
           console.log(`这是screen中获取的 width = ${width}   height = ${height}`);
+          console.log(Platform.OS)
         }}
       />
       <Text>123</Text>
