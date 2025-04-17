@@ -21,6 +21,7 @@ import NavigationBarView from './src/android/NavigationBarView';
 import TsDemo from './src/ts/TsDemo';
 import {ApiTest} from "./src/apiTest/ApiTest";
 import StyleSheetTest from "./src/apiTest/StyleSheetTest";
+import LinkingTest from "./src/apiTest/LinkingTest";
 
 function App() {
   return (
@@ -45,7 +46,8 @@ function App() {
     // <NavigationBarView />
     // <TsDemo />
     //   <ApiTest/>
-    <StyleSheetTest/>
+    // <StyleSheetTest/>
+    <LinkingTest/>
   );
 }
 
