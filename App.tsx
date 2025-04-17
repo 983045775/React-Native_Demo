@@ -24,7 +24,8 @@ import StyleSheetTest from './src/apiTest/StyleSheetTest';
 import LinkingTest from './src/apiTest/LinkingTest';
 import PixelRatioTest from './src/apiTest/PixelRatioTest';
 import BackHandleTest from './src/apiTest/BackHandleTest';
-import PermissionsTest from "./src/apiTest/PermissionsTest.tsx";
+import PermissionsTest from './src/apiTest/PermissionsTest.tsx';
+import VibrationTest from './src/apiTest/VibrationTest';
 
 function App() {
   return (
@@ -53,7 +54,8 @@ function App() {
     // <LinkingTest/>
     // <PixelRatioTest />
     //   <BackHandleTest/>
-    <PermissionsTest/>
+    // <PermissionsTest/>
+    <VibrationTest />
   );
 }
 
