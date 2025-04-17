@@ -23,6 +23,7 @@ import {ApiTest} from './src/apiTest/ApiTest';
 import StyleSheetTest from './src/apiTest/StyleSheetTest';
 import LinkingTest from './src/apiTest/LinkingTest';
 import PixelRatioTest from './src/apiTest/PixelRatioTest';
+import BackHandleTest from './src/apiTest/BackHandleTest';
 
 function App() {
   return (
@@ -49,7 +50,8 @@ function App() {
     //   <ApiTest/>
     // <StyleSheetTest/>
     // <LinkingTest/>
-    <PixelRatioTest />
+    // <PixelRatioTest />
+      <BackHandleTest/>
   );
 }
 
