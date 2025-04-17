@@ -24,6 +24,7 @@ import StyleSheetTest from './src/apiTest/StyleSheetTest';
 import LinkingTest from './src/apiTest/LinkingTest';
 import PixelRatioTest from './src/apiTest/PixelRatioTest';
 import BackHandleTest from './src/apiTest/BackHandleTest';
+import PermissionsTest from "./src/apiTest/PermissionsTest.tsx";
 
 function App() {
   return (
@@ -51,7 +52,8 @@ function App() {
     // <StyleSheetTest/>
     // <LinkingTest/>
     // <PixelRatioTest />
-      <BackHandleTest/>
+    //   <BackHandleTest/>
+    <PermissionsTest/>
   );
 }
 
