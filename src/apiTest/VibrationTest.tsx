@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
         transform:[
             // {scaleX:1.2},
             // {translateX:30},
-            // {rotateX:"100deg"}
+            {rotateX:"100deg"},
             {rotate:"90deg"}
         ]
 
