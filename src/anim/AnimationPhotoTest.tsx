@@ -5,16 +5,16 @@ import {Animated, Button, StyleSheet, Text, View} from 'react-native';
 import url from '../assets/avatar.png';
 
 function AnimationDecayTest() {
-  const shakeValue = useRef(new Animated.Value(0));
+  const shakeValue = useRef(new Animated.ValueXY({x: 0, y: 0}));
   const animLoop = Animated.loop(
     Animated.sequence([
       Animated.timing(shakeValue.current, {
         duration: 10,
-        toValue: 2,
+        toValue: {x: 1, y: 1},
         useNativeDriver: false,
       }),
       Animated.timing(shakeValue.current, {
-        toValue: -2,
+        toValue: {x: -1, y: -1},
         duration: 10,
         useNativeDriver: false,
       }),
@@ -42,7 +42,10 @@ function AnimationDecayTest() {
       />
       <Animated.Image
         source={url}
-        style={[styles.photo, {marginLeft: shakeValue.current}]}
+        style={[
+          styles.photo,
+          {marginLeft: shakeValue.current.x, marginTop: shakeValue.current.y},
+        ]}
       />
     </View>
   );
