@@ -13,13 +13,21 @@ export const Animationtest1 = () => {
     };
   };
 
+  const rotateTest = (num: number) => {
+    return {
+      inputRange: [0, num],
+      outputRange: ['0deg', num+'deg'],
+    };
+  };
+  const rotateValue = value.interpolate(rotateTest(180));
+
   return (
     <View>
       <Text>这是位移动画</Text>
       <Button
         title={'开始'}
         onPress={() => {
-          Animated.timing(marginLefttValue.current, timingStart(200)).start();
+          Animated.timing(marginLefttValue.current, timingStart(180)).start();
         }}
       />
       <Button
@@ -30,7 +38,11 @@ export const Animationtest1 = () => {
       />
 
       <Animated.View
-        style={[styles.block, {marginLeft: marginLefttValue.current}]}
+        style={[
+          styles.block,
+          {marginLeft: marginLefttValue.current},
+          {transform: [{rotate: rotateValue}]},
+        ]}
       />
     </View>
   );

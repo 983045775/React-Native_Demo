@@ -24,9 +24,10 @@ import StyleSheetTest from './src/apiTest/StyleSheetTest';
 import LinkingTest from './src/apiTest/LinkingTest';
 import PixelRatioTest from './src/apiTest/PixelRatioTest';
 import BackHandleTest from './src/apiTest/BackHandleTest';
-import PermissionsTest from './src/apiTest/PermissionsTest.tsx';
+import PermissionsTest from './src/apiTest/PermissionsTest';
 import VibrationTest from './src/apiTest/VibrationTest';
-import KeyboardTest from './src/apiTest/KeyboardTest.tsx';
+import KeyboardTest from './src/apiTest/KeyboardTest';
+import {Animationtest1} from "./src/anim/AnimationTest1";
 
 function App() {
   return (
@@ -57,7 +58,8 @@ function App() {
     //   <BackHandleTest/>
     // <PermissionsTest/>
     // <VibrationTest />
-      <KeyboardTest/>
+    //   <KeyboardTest/>
+      <Animationtest1/>
   );
 }
 
