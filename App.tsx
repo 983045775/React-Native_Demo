@@ -27,7 +27,8 @@ import BackHandleTest from './src/apiTest/BackHandleTest';
 import PermissionsTest from './src/apiTest/PermissionsTest';
 import VibrationTest from './src/apiTest/VibrationTest';
 import KeyboardTest from './src/apiTest/KeyboardTest';
-import {Animationtest1} from "./src/anim/AnimationTest1";
+import Animationtest1 from "./src/anim/AnimationTest1";
+import AnimationDecayTest from "./src/anim/AnimationDecayTest";
 
 function App() {
   return (
@@ -59,7 +60,8 @@ function App() {
     // <PermissionsTest/>
     // <VibrationTest />
     //   <KeyboardTest/>
-      <Animationtest1/>
+    //   <Animationtest1/>
+    <AnimationDecayTest />
   );
 }
 
