@@ -30,40 +30,42 @@ import KeyboardTest from './src/apiTest/KeyboardTest';
 import Animationtest1 from './src/anim/AnimationTest1';
 import AnimationDecayTest from './src/anim/AnimationDecayTest';
 import AnimationPhotoTest from './src/anim/AnimationPhotoTest';
+import ScrollViewTest from './src/anim/ScrollViewTest';
 
 function App() {
-  return (
-    // <ScrollView stickyHeaderIndices={[0]}>
-    //   <View
-    //     style={{
-    //       flexDirection: 'column',
-    //       width: '100%',
-    //       height: 8100,
-    //     }}>
-    //     <BankCardView />
-    //     <InputViewDemo />
-    //     <PressableView />
-    // <ScrollsView />
-    // <ScrollViewDemo length={30}/>
-    // <FlatListView size={130} />
-    // <SectionViewDemo />
-    // <PersonalView />
-    // </View>
-    // <BridgeClassDemo />
-    // <InfoView />
-    // <NavigationBarView />
-    // <TsDemo />
-    //   <ApiTest/>
-    // <StyleSheetTest/>
-    // <LinkingTest/>
-    // <PixelRatioTest />
-    //   <BackHandleTest/>
-    // <PermissionsTest/>
-    // <VibrationTest />
-    //   <KeyboardTest/>
-    //   <Animationtest1/>
-    <AnimationPhotoTest />
-  );
+    return (
+        // <ScrollView stickyHeaderIndices={[0]}>
+        //   <View
+        //     style={{
+        //       flexDirection: 'column',
+        //       width: '100%',
+        //       height: 8100,
+        //     }}>
+        //     <BankCardView />
+        //     <InputViewDemo />
+        //     <PressableView />
+        // <ScrollsView />
+        // <ScrollViewDemo length={30}/>
+        // <FlatListView size={130} />
+        // <SectionViewDemo />
+        // <PersonalView />
+        // </View>
+        // <BridgeClassDemo />
+        // <InfoView />
+        // <NavigationBarView />
+        // <TsDemo />
+        //   <ApiTest/>
+        // <StyleSheetTest/>
+        // <LinkingTest/>
+        // <PixelRatioTest />
+        //   <BackHandleTest/>
+        // <PermissionsTest/>
+        // <VibrationTest />
+        //   <KeyboardTest/>
+        //   <Animationtest1/>
+        // <AnimationPhotoTest />
+        <ScrollViewTest />
+    );
 }
 
 export default App;
