@@ -1,6 +1,6 @@
 type Teacher = {
-  name: string;
-  age: number;
-  play: string;
-  eat?: string;
+    name: string;
+    age: number;
+    play: string;
+    eat?: string;
 };

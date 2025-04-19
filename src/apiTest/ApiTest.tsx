@@ -4,35 +4,41 @@ import {
     Text,
     useWindowDimensions,
     Dimensions,
-    Button, StyleSheet, Platform,
+    Button,
+    StyleSheet,
+    Platform,
 } from 'react-native';
 
 export const ApiTest = () => {
-  const {width, height} = useWindowDimensions();
-  useEffect(() => {
-    prithWH();
-  }, []);
-  const prithWH = () => {
-    console.log(`这是useWindowDimensions获取的  width = ${width}   height = ${height}`);
-  };
-  return (
-    <View>
-      <Button
-        title={'获取宽高'}
-        onPress={() => {
-          const {width, height} = Dimensions.get('window');
-          console.log(`这是screen中获取的 width = ${width}   height = ${height}`);
-          console.log(Platform.OS)
-        }}
-      />
-      <Text>123</Text>
-    </View>
-  );
+    const {width, height} = useWindowDimensions();
+    useEffect(() => {
+        prithWH();
+    }, []);
+    const prithWH = () => {
+        console.log(
+            `这是useWindowDimensions获取的  width = ${width}   height = ${height}`,
+        );
+    };
+    return (
+        <View>
+            <Button
+                title={'获取宽高'}
+                onPress={() => {
+                    const {width, height} = Dimensions.get('window');
+                    console.log(
+                        `这是screen中获取的 width = ${width}   height = ${height}`,
+                    );
+                    console.log(Platform.OS);
+                }}
+            />
+            <Text>123</Text>
+        </View>
+    );
 };
 
 StyleSheet.create({
-    root:{
-        width:"100%",
-        height:"100%",
-    }
-})
+    root: {
+        width: '100%',
+        height: '100%',
+    },
+});

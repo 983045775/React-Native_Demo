@@ -18,9 +18,9 @@ function TsDemo() {
     };
 
     const mother: People.Lc = {
-        name: "刘铖",
-        age: "23",
-    }
+        name: '刘铖',
+        age: '23',
+    };
     console.log(lc.play);
     console.log(mother.name);
     return (
