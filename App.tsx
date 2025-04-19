@@ -31,6 +31,8 @@ import Animationtest1 from './src/anim/AnimationTest1';
 import AnimationDecayTest from './src/anim/AnimationDecayTest';
 import AnimationPhotoTest from './src/anim/AnimationPhotoTest';
 import ScrollViewTest from './src/anim/ScrollViewTest';
+import LayotuAnimationTest from './src/anim/layotuAnimationTest';
+import Anim10 from './src/anim/Anim10';
 
 function App() {
     return (
@@ -64,7 +66,9 @@ function App() {
         //   <KeyboardTest/>
         //   <Animationtest1/>
         // <AnimationPhotoTest />
-        <ScrollViewTest />
+        // <ScrollViewTest />
+        <LayotuAnimationTest />
+        // <Anim10 />
     );
 }
 
