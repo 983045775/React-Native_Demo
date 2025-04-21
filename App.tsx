@@ -33,6 +33,7 @@ import AnimationPhotoTest from './src/anim/AnimationPhotoTest';
 import ScrollViewTest from './src/anim/ScrollViewTest';
 import LayotuAnimationTest from './src/anim/layotuAnimationTest';
 import Anim10 from './src/anim/Anim10';
+import TableViewTest from './src/anim/TableViewTest.tsx';
 
 function App() {
     return (
@@ -67,8 +68,9 @@ function App() {
         //   <Animationtest1/>
         // <AnimationPhotoTest />
         // <ScrollViewTest />
-        <LayotuAnimationTest />
+        // <LayotuAnimationTest />
         // <Anim10 />
+        <TableViewTest />
     );
 }
 
